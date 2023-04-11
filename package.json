@@ -1,0 +1,15 @@
+{
+  "name": "simplon-cda",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "brief devOps",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node index.js"
+  },
+  "author": "Anhara",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 
 const  connectDB = async()=>{
     try{
-       await mongoose.connect("mongodb+srv://anharasusoma:Sanaya2020@beautnature.aiqlaec.mongodb.net/?retryWrites=true&w=majority")
+       await mongoose.connect(process.env.MONGODB_URI)
   
     console.log("db connected")
     }
@@ -11,6 +11,3 @@ const  connectDB = async()=>{
     }
 } 
 export default connectDB;
-
-
-//mongodb+srv://anharasusoma:<password>@beautnature.aiqlaec.mongodb.net/?retryWrites=true&w=majority

@@ -1,9 +1,13 @@
 import express from "express";
 import path from "path";
+import dotenv from "dotenv";
 import homepageRouter from "./routes/homepageRoute.js";
 import connectDB from "./config/connectdb.js";
 
 const __dirname = path.resolve();
+
+//config dotenv 
+dotenv.config()
 
 
 // Create express App

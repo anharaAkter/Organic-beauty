@@ -4,24 +4,17 @@ import homepageRouter from "./routes/homepageRoute.js";
 
 const __dirname = path.resolve();
 
-
-
-//const __dirname = path.resolve();
-
-// create express  App
+// Create express App
 const app = express();
 
-//set views engine
+// Set views engine
 app.set("view engine", "ejs");
 
-//set view directory
+// Set views directory
 app.set("views", "views");
 
-app.use(express.static(path.join(__dirname,"public")));
-
-app.get("/",(req,res)=>{
-    res.send("Hello world from anhara")
 app.use(express.static(path.join(__dirname, "public")));
+
 app.use(homepageRouter);
 
 // Create server and Listenning

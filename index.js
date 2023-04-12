@@ -1,13 +1,23 @@
 import express from "express";
+import path from "path";
+import homepageRouter from "./routes/homepageRoute.js";
 
+const __dirname = path.resolve();
+
+// Create express App
 const app = express();
 
-app.get("/",(req,res)=>{
-    res.send("Hello world")
+// Set views engine
+app.set("view engine", "ejs");
 
-})
+// Set views directory
+app.set("views", "views");
 
-app.listen(8082, ()=>{
+app.use(express.static(path.join(__dirname, "public")));
 
-    console.log( "Server is listening at port 8082")
-})
+app.use(homepageRouter);
+
+// Create server and Listenning
+app.listen(8082, () => {
+  console.log("Server is listenning at port 8082");
+});

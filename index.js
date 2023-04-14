@@ -4,6 +4,7 @@ import path from "path";
 import dotenv from "dotenv";
 import homepageRouter from "./routes/homepageRoute.js";
 import router from "./routes/categoryRoute.js"
+import productRouter from "./routes/productRoute.js";
 import connectDB from "./config/connectdb.js";
 
 const __dirname = path.resolve();
@@ -15,6 +16,7 @@ dotenv.config()
 // Create express App
 const app = express();
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }));
 connectDB();
 
 // Set views engine
@@ -22,8 +24,17 @@ app.set("view engine", "ejs");
 
 // Set views directory
 app.set("views", "views");
+
+//load assets 
+app.use('/css',express.static(path.resolve(__dirname,"assets/css")))
+
+//load routers 
 app.use(homepageRouter);
 app.use(router)
+app.use(productRouter);
+
+
+//load assets 
 app.use(express.static(path.join(__dirname, "public")));
 
 

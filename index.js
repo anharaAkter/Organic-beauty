@@ -26,7 +26,7 @@ app.set("view engine", "ejs");
 app.set("views", "views");
 
 //load assets 
-app.use('/css',express.static(path.resolve(__dirname,"assets/css")))
+app.use('/css',express.static(path.resolve(__dirname,"assets/css")));
 
 //load routers 
 app.use(homepageRouter);

@@ -8,5 +8,11 @@
   </head>
   <body>
     <h1>categoris view</h1>
+    <ul>
+      <% categories.forEach(function(category) { %>
+         <li> Name:<%= category.categoryName %> Description:<%= category.categoryDescription %></li>
+      <% }); %> 
+     </ul>
+    
   </body>
 </html>

@@ -1,5 +1,9 @@
 :root{
     --green : #2c9914;
+    --pink : #7e1499;
+    --white :  #fff;
+
+
 }
 
 
@@ -13,6 +17,27 @@
     font-family: cursive;
 }
 *::selection{
-    background: var(--green);
+    background: var(--pink);
     color: #fff;
+}
+html{
+    font-size: 80.5% ;
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    background: var(--white);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+header .logo img{
+    height: 6rem;
+
 }

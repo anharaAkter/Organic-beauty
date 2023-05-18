@@ -15,10 +15,10 @@ export const getProducts=async(req,res,next)=>{
 }
 
 //get product By Id 
-export const getProduct = async (req,res,next)=>{
+export const getProduct = async (req,res)=>{
 const id = req.query.id;
 const productId = await Product.findById(id);
-console.log(productId);
+console.log("product"+" "+productId);
 //res.status(404).send({message: "not found product Id"})
 res.status(200).send(productId);
 
@@ -69,7 +69,7 @@ export const postProduct = async(req,res)=>{
   //update Category
 export const updateProductById = async (req,res) => {
 
-    // Send categoryName to the req.body
+    // Send productName to the req.body
     const id = req.query.id;
     const productName = req.body.productName;
     const productDescription = req.body.productDescription;
@@ -77,7 +77,7 @@ export const updateProductById = async (req,res) => {
     
    
   
-    // find category by Id from mongoose 
+    // find product by Id from mongoose 
     const product = await Product.findByIdAndUpdate(id,{productName,productDescription,productPrice})
     console.log(product)
     

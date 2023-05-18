@@ -26,9 +26,9 @@ app.set("view engine", "ejs");
 app.set("views", "views");
 
 //load assets 
-app.use('/css',express.static(path.resolve(__dirname,"assets/css")));
-app.use('/img',express.static(path.resolve(__dirname,"assets/img")));
-
+app.use('/css',express.static(path.join(__dirname,"assets/css")));
+app.use('/img',express.static(path.join(__dirname,"assets/img")));
+app.use('/js',express.static(path.join(__dirname, "assets/js")));
 //load routers 
 app.use(homepageRouter);
 app.use(router)
@@ -36,7 +36,7 @@ app.use(productRouter);
 
 
 //load assets 
-app.use(express.static(path.join(__dirname, "public")));
+/* app.use(express.static(path.join(__dirname, "public"))); */
 
 
 

@@ -1,12 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
-</head>
-<body>
-    
-</body>
-</html>
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- include header -->
+
+
+<!-- main site  -->
+
+<section class="products">
+    <a href="#" class="add-product">
+        <span class="text-gradient"> <i class="fa-brands fa-product-hunt"></i>New Products</span>
+       </a>
+
+    <div class="products-container">
+
+      <form action="/" method="post">
+          <table class="table">
+              <thead class="thead-dark">
+                  <tr>
+                      <th>Product ID</th>
+                      <th>Product name</th>
+                      <th>Product Description</th>
+                      <th>Product Price</th>
+                      <th>Product Category</th>
+                      <th>Modify</th>
+
+                  </tr>
+
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>1234</td>
+                      <td>Mixa bébé</td>
+                      <td>Lait de Toilet</td>
+                      <td> 50</td>
+                      <td> Soin Corp</td>
+                      <td> <a href="#">Delete</a>
+                          <a href="#">Delete</a>
+                      </td>
+                  </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                    <td>1234</td>
+                    <td>Mixa bébé</td>
+                    <td>Lait de Toilet</td>
+                    <td> 50</td>
+                    <td> Soin Corp</td>
+                    <td> <a href="#">Delete</a>
+                        <a href="#">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>1234</td>
+                    <td>Mixa bébé</td>
+                    <td>Lait de Toilet</td>
+                    <td> 50</td>
+                    <td> Soin Corp</td>
+                    <td> <a href="#">Delete</a>
+                        <a href="#">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+
+      </form>
+    </div>
+</section>
+
+
+<!-- main site  -->
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- include footer -->

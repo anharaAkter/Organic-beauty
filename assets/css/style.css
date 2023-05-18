@@ -168,6 +168,11 @@ section{
  .text-gradient{
     font-size: 2rem;
 }
+
+.form-group .btn:hover{
+    background-color: var(--dark);
+    color: var(--border);
+}
 /* media queries */
 
 @media (max-width:991px) {

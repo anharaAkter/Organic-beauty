@@ -1,0 +1,60 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+
+   
+     <div class="products-container">
+
+      <span>categoris view</span>
+        <a href="/add-category" class="border-shadow">
+            <span class="text-gradient">New Category <i class="fas fa-user"></i></span>
+        </a>
+
+      <form action="/" method="post">
+          <table class="table">
+              <thead class="thead-dark">
+                  <tr>
+
+                      <th>Category Number</th>
+                      <th>Category Name</th>
+                      
+                      <th>Product Description</th>
+                      
+                      <th>Action</th>
+
+                  </tr>
+
+              </thead>
+              <tbody>
+               <% for(var i = 0; i < categories.length; i++) { %>
+                  <tr>
+                      <td><%= i + 1 %></td>
+                      <td><%= categories[i].categoryName %></td>
+                      <td><%= categories[i].categoryDescription %></td>
+                      
+                      <td>
+                          <a href="/update-category?id=<%=categories[i]._id%>" class="btn border-shadow update">
+                              <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                          </a>
+                          <a class="delete-category" data-id= <%= categories[i]._id%> >
+                           <span class="text-gradient"><i class="fas fa-times"></i></span>
+                       </a>
+                      </td>
+                  </tr>
+                  <% } %>
+            </tbody>
+         </table>
+
+      </form>
+    </div>
+
+
+
+
+
+
+  <!-- include footer -->
+<%- include('include/_footer') %>
+<!-- include footer -->

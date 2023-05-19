@@ -1,0 +1,19 @@
+ <!-- form handling -->
+ <form action="/add-category" method="POST" id="add_category">
+    <div class="new_category">
+        <div class="form-group">
+            <label for="name" class="text-light">Category Name</label>
+            <input type="hidden" name="_id" value="">
+            <input type="text" name="categoryName" value="" placeholder="Category name">
+        </div>
+        <div class="form-group">
+            <label for="Description" class="text-light">Category Description</label>
+            <input type="text" name="categoryDescription" value="" placeholder="Insert the description of product">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>

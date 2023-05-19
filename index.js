@@ -29,6 +29,8 @@ app.set("views", "views");
 app.use('/css',express.static(path.join(__dirname,"assets/css")));
 app.use('/img',express.static(path.join(__dirname,"assets/img")));
 app.use('/js',express.static(path.join(__dirname, "assets/js")));
+
+
 //load routers 
 app.use(homepageRouter);
 app.use(router)

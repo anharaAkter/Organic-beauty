@@ -6,12 +6,11 @@
 
    
      <div class="products-container">
-      <h1>categoris view</h1>
-      <ul>
-        <% categories.forEach(function(category) { %>
-           <li> Name:<%= category.categoryName %> Description:<%= category.categoryDescription %></li>
-        <% }); %> 
-       </ul>
+
+      <span>categoris view</span>
+        <a href="/add-category" class="border-shadow">
+            <span class="text-gradient">New Category <i class="fas fa-user"></i></span>
+        </a>
 
       <form action="/" method="post">
           <table class="table">
@@ -38,9 +37,6 @@
                       <td>
                          <!--  <a href="/update-user?id=" class="btn border-shadow update">
                               <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
-                          </a>
-                          <a class="btn border-shadow delete" data-id= >
-                              <span class="text-gradient"><i class="fas fa-times"></i></span>
                           </a> -->
                           <a class="delete-category" data-id= <%= categories[i]._id%> >
                            <span class="text-gradient"><i class="fas fa-times"></i></span>

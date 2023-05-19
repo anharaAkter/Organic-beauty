@@ -41,7 +41,7 @@ header{
     padding: 2rem;
     background: var(--white);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
 

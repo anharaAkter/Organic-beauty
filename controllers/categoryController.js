@@ -2,6 +2,33 @@ import Category from "../models/Category.js";
 
 
 //create category POST
+export const createCategory = async (req, res) => {
+  try {
+    // Validate request
+    if (!req.body) {
+      res.status(400).send({ message: "Content can not be empty!" });
+      return;
+    }
+
+    // Create a new category
+    const category = new Category({
+      categoryName: req.body.categoryName,
+      categoryDescription: req.body.categoryDescription,
+    });
+
+    // Save the category in the database
+    const categoryData = await category.save();
+    console.log(categoryData);
+    // res.send(data)
+    res.redirect('/add-category');
+  } catch (err) {
+    res.status(500).send({
+      message:
+        err.message || "Some error occurred while creating a create operation",
+    });
+  }
+};
+
 
 
 //get one or all categories 

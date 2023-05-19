@@ -1,0 +1,26 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- form handling -->
+<form method="POST" id="update_category">
+    <div class="new-category">
+        <div class="form-group">
+            <label for="categoryName" class="text-light">Name</label>
+            <input type="hidden" name="id" value="<%=category._id %>">
+            <input type="text" name="name" value="<%=category.name %>" placeholder="Mark category">
+        </div>
+        <div class="form-group">
+            <label for="categoryDescription" class="text-light">Email</label>
+            <input type="text" name="categoryDesctription" value="<%=category.categoryDescription%>" placeholder="category desctription">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

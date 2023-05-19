@@ -77,8 +77,62 @@ export const getCategories = async(req,res,next)=>{
   }
 }
   
-   
+//render add-category
+export const addCategory = (req, res) =>{
+  res.render('add-category');
+}
 
+
+//update category 
+
+export const updateCategory = async (req, res) => {
+  try {
+    if (!req.body) {
+      return res.status(400).send({ message: "Data to update cannot be empty" });
+    }
+
+    const id = req.params.id;
+    console.log(id);
+    const category = await Category.findByIdAndUpdate(id, req.body, { useFindAndModify: false });
+    console.log('category ' , category);
+    if (!category) {
+      return res.status(404).send({ message: `Cannot update category with ${id}. Maybe category not found!` });
+    }
+
+    res.send(category);
+  } catch (err) {
+    res.status(500).send({ message: "Error updating user information" });
+  }
+};
+
+//fetch category from the end point 
+export const update_category = async (req, res) => {
+  try {
+    const response = await fetch(`http://localhost:8082/update-category?id=${req.query.id}`);
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+    const categoryData = await response.json();
+    res.render("updateCategory", { category: categoryData });
+  } catch (err) {
+    res.send(err);
+  }
+};
+
+
+
+
+
+
+/* export const updateCategory1 = (req, res) =>{
+  axios.get('http://localhost:3000/api/users', { params : { id : req.query.id }})
+      .then(function(userdata){
+          res.render("update_user", { user : userdata.data})
+      })
+      .catch(err =>{
+          res.send(err);
+      })
+} */
 
 /*   const categories = await Category.findById(id);
   if(!categories){

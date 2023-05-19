@@ -30,7 +30,6 @@ app.use('/css',express.static(path.join(__dirname,"assets/css")));
 app.use('/img',express.static(path.join(__dirname,"assets/img")));
 app.use('/js',express.static(path.join(__dirname, "assets/js")));
 
-
 //load routers 
 app.use(homepageRouter);
 app.use(router)
@@ -40,9 +39,9 @@ app.use(productRouter);
 //load assets 
 /* app.use(express.static(path.join(__dirname, "public"))); */
 
-
-
 // Create server and Listenning
 app.listen(8082, () => {
   console.log("Server is listenning at port 8082");
 });
+
+

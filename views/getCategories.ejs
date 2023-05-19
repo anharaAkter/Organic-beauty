@@ -35,9 +35,9 @@
                       <td><%= categories[i].categoryDescription %></td>
                       
                       <td>
-                         <!--  <a href="/update-user?id=" class="btn border-shadow update">
+                          <a href="/update-category?id=<%=categories[i]._id%>" class="btn border-shadow update">
                               <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
-                          </a> -->
+                          </a>
                           <a class="delete-category" data-id= <%= categories[i]._id%> >
                            <span class="text-gradient"><i class="fas fa-times"></i></span>
                        </a>

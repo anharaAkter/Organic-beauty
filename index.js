@@ -7,6 +7,7 @@ import router from "./routes/categoryRoute.js"
 import productRouter from "./routes/productRoute.js";
 import connectDB from "./config/connectdb.js";
 
+
 const __dirname = path.resolve();
 
 //config dotenv 

@@ -31,7 +31,8 @@ if (window.location.pathname === "/category") {
   }
 
   //update category``
-  document.getElementById("update_category").addEventListener("submit", async function(event) {
+  const updateEvent =()=>{
+    document.getElementById("update_category").addEventListener("submit", async function(event) {
     event.preventDefault();
   
     var unindexed_array = Array.from(new FormData(this));
@@ -64,5 +65,6 @@ if (window.location.pathname === "/category") {
       console.error(err);
     }
   });
+}
   
   
